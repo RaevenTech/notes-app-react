@@ -14,7 +14,11 @@ body,
   height: 100vh;
   overflow: hidden;
   font-size: 16px;
-  background: url(https://www.toptal.com/designers/subtlepatterns/patterns/lightpaperfibers.png);
+  background-color: #cc8800;
+  background-image: url(http://www.transparenttextures.com/patterns/textured-paper.png);
+  /*background: url(https://tse3.mm.bing.net/th?id=OIP.wKQTlCtTqKDFXOfxTe5xmwHaEK&pid=Api&P=0&w=296&h=166);*/
+
+  
 }
 
 button {
