@@ -1,12 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import { nanoid } from "nanoid";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
 
 function App() {
-    const [notes, setNotes] = useState([]); //notes here is passed as a prop Sidebar comp.
+    const [notes, setNotes] = useState(JSON.parse(localStorage.notes)); //notes here is passed as a prop Sidebar comp.
     const [activeNote, setActiveNote] = useState(false);
+
+    useEffect(() => {
+        localStorage.setItem("notes", JSON.stringify(notes) || []);
+    }, [notes]);
 
     const onAddNote = () => {
         // function for creating a new note
